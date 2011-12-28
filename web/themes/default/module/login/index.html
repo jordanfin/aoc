@@ -1,0 +1,21 @@
+<form action="" method="post">
+	<table border="0" cellpading="2" cellspacing="1">
+		<!-- BEGIN ERROR_FORM -->
+			<tr>
+				<td colspan="2">{ERROR_FORM.Display}</td>
+			</tr>
+		<!-- END ERROR_FORM -->
+		<tr>
+			<td>{usuario}</td>
+			<td><input type="text" name="Login[name]" placeholder="{usuario}"{namev}></td>
+		</tr>
+		<tr>
+			<td>{password}</td>
+			<td><input type="password" name="Login[password]" placeholder="{password}"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><input type="submit" name="submit" value="{submit}"></td>
+		</tr>
+	</table>
+</form>
+<a href="/index.php?page=NewAccount">{registrate}</a>

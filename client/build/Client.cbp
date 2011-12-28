@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Client" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../bin/debug/client" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../obj/debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="../bin/release/client" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../obj/release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="../src" />
+			<Add directory="../include/Linux" />
+			<Add directory="/usr/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-lXext -lX11 -lXmu -lXi -lXrandr" />
+			<Add option="-lGL -lGLU" />
+			<Add option="-lopenal" />
+			<Add option="-lsndfile" />
+			<Add option="-lfreetype" />
+			<Add option="-lm" />
+			<Add directory="../lib/Linux" />
+			<Add directory="/usr/X11R6/lib" />
+			<Add directory="/usr/local/lib" />
+			<Add directory="/usr/lib" />
+			<Add directory="/lib" />
+		</Linker>
+		<Unit filename="../src/Audio/OpenALHelper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Audio/OpenALHelper.h" />
+		<Unit filename="../src/Audio/Sound.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Audio/Sound.h" />
+		<Unit filename="../src/Audio/SoundLoader.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Audio/SoundLoader.h" />
+		<Unit filename="../src/Audio/SoundManager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Audio/SoundManager.h" />
+		<Unit filename="../src/Config.h" />
+		<Unit filename="../src/Game/Application.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Game/Application.h" />
+		<Unit filename="../src/Game/Character.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Game/Character.h" />
+		<Unit filename="../src/Game/Configuration.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Game/Configuration.h" />
+		<Unit filename="../src/Game/Display.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Game/Display.h" />
+		<Unit filename="../src/Game/Index.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Game/Index.h" />
+		<Unit filename="../src/Game/Intro.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Game/Intro.h" />
+		<Unit filename="../src/Game/Language.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Game/Language.h" />
+		<Unit filename="../src/Game/Login.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Game/Login.h" />
+		<Unit filename="../src/Game/User.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Game/User.h" />
+		<Unit filename="../src/Graphics/Color.h" />
+		<Unit filename="../src/Graphics/Font.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Graphics/Font.h" />
+		<Unit filename="../src/Graphics/Glew/Glew.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Graphics/Glew/Glew.h" />
+		<Unit filename="../src/Graphics/Glew/Glext.h" />
+		<Unit filename="../src/Graphics/Glew/Glxew.h" />
+		<Unit filename="../src/Graphics/Linux/VideoRender.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Graphics/OpenGLHelper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Graphics/OpenGLHelper.h" />
+		<Unit filename="../src/Graphics/Texture.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Graphics/Texture.h" />
+		<Unit filename="../src/Graphics/TextureHelper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Graphics/TextureHelper.h" />
+		<Unit filename="../src/Graphics/TextureLoader.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Graphics/TextureLoader.h" />
+		<Unit filename="../src/Graphics/TextureManager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Graphics/TextureManager.h" />
+		<Unit filename="../src/Graphics/TextureRender.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Graphics/TextureRender.h" />
+		<Unit filename="../src/Graphics/VideoRender.h" />
+		<Unit filename="../src/Gui/Button.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Gui/Button.h" />
+		<Unit filename="../src/Gui/Clipboard.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Gui/Clipboard.h" />
+		<Unit filename="../src/Gui/Form.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Gui/Form.h" />
+		<Unit filename="../src/Gui/Label.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Gui/Label.h" />
+		<Unit filename="../src/Gui/List.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Gui/List.h" />
+		<Unit filename="../src/Gui/TextBox.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Gui/TextBox.h" />
+		<Unit filename="../src/Gui/Widget.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Gui/Widget.h" />
+		<Unit filename="../src/Gui/WindowManager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Gui/WindowManager.h" />
+		<Unit filename="../src/Gui/WindowObj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Gui/WindowObj.h" />
+		<Unit filename="../src/Gui/WindowParser.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Gui/WindowParser.h" />
+		<Unit filename="../src/Math/General.h" />
+		<Unit filename="../src/Math/Rect.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Math/Rect.h" />
+		<Unit filename="../src/Math/Vector.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Math/Vector.h" />
+		<Unit filename="../src/Network/Protocol.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Network/Protocol.h" />
+		<Unit filename="../src/Network/Socket.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Network/Socket.h" />
+		<Unit filename="../src/Network/SocketHelper.h" />
+		<Unit filename="../src/Network/Unix/SocketHelper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/Dictionary.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/Dictionary.h" />
+		<Unit filename="../src/System/Error.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/Error.h" />
+		<Unit filename="../src/System/IOHelper.h" />
+		<Unit filename="../src/System/MD5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/MD5.h" />
+		<Unit filename="../src/System/Mutex.h" />
+		<Unit filename="../src/System/MutexHandler.h" />
+		<Unit filename="../src/System/Pack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/Pack.h" />
+		<Unit filename="../src/System/Parser.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/Parser.h" />
+		<Unit filename="../src/System/Platform.h" />
+		<Unit filename="../src/System/Thread.h" />
+		<Unit filename="../src/System/Timer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/Timer.h" />
+		<Unit filename="../src/System/Unix/IOHelper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/Unix/Mutex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/Unix/Platform.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/Unix/Thread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Terrain/Terrain.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Terrain/Terrain.h" />
+		<Unit filename="../src/Terrain/TerrainLoader.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Terrain/TerrainLoader.h" />
+		<Unit filename="../src/Terrain/TerrainRender.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Terrain/TerrainRender.h" />
+		<Unit filename="../src/Window/Event.h" />
+		<Unit filename="../src/Window/Linux/VideoModeSupport.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Window/Linux/Window.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Window/VideoModeSupport.h" />
+		<Unit filename="../src/Window/Window.h" />
+		<Unit filename="../src/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

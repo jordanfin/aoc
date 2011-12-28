@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Server" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="Server" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../bin/Debug Win32" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-W" />
+					<Add option="-g" />
+					<Add option="-O0" />
+					<Add option="-I/usr/include/mysql" />
+					<Add option="-g" />
+					<Add option="-pipe" />
+					<Add option="-m64" />
+					<Add option="-D_GNU_SOURCE" />
+					<Add option="-D_FILE_OFFSET_BITS=64" />
+					<Add option="-D_LARGEFILE_SOURCE" />
+					<Add option="-fno-strict-aliasing" />
+					<Add option="-DLINUX" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add directory="../src" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../src" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-L/usr/lib64/mysql" />
+					<Add option="-lmysqlclient" />
+					<Add option="-lz" />
+					<Add option="-lcrypt" />
+					<Add option="-lnsl" />
+					<Add option="-lm" />
+					<Add option="-L/usr/lib64" />
+					<Add option="-lssl" />
+					<Add option="-lcrypto" />
+					<Add library="wsock32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="Server" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../bin/release" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-W" />
+					<Add option="-I/usr/include/mysql" />
+					<Add option="-pipe" />
+					<Add option="-m64" />
+					<Add option="-fno-strict-aliasing" />
+					<Add option="-DLINUX" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add directory="../src" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../src" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-L/usr/lib64/mysql" />
+					<Add option="-lmysqlclient" />
+					<Add option="-lz" />
+					<Add option="-lcrypt" />
+					<Add option="-lnsl" />
+					<Add option="-lm" />
+					<Add option="-L/usr/lib64" />
+					<Add option="-lssl" />
+					<Add option="-lcrypto" />
+					<Add library="wsock32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="../src/Config.h" />
+		<Unit filename="../src/Core/Application.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Core/Application.h" />
+		<Unit filename="../src/Core/Console.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Core/Console.h" />
+		<Unit filename="../src/Core/Users.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Core/Users.h" />
+		<Unit filename="../src/Database/Accounts.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Database/Accounts.h" />
+		<Unit filename="../src/Database/Connector.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Database/Connector.h" />
+		<Unit filename="../src/Database/Default.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Database/Default.h" />
+		<Unit filename="../src/Database/Query.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Database/Query.h" />
+		<Unit filename="../src/Math/General.h" />
+		<Unit filename="../src/Math/Rect.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Math/Rect.h" />
+		<Unit filename="../src/Network/Protocol.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Network/Protocol.h" />
+		<Unit filename="../src/Network/Socket.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/Network/Socket.h" />
+		<Unit filename="../src/Network/SocketHelper.h" />
+		<Unit filename="../src/Network/Win32/SocketHelper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/Dictionary.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/Dictionary.h" />
+		<Unit filename="../src/System/Error.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/Error.h" />
+		<Unit filename="../src/System/IOHelper.h" />
+		<Unit filename="../src/System/Mutex.h" />
+		<Unit filename="../src/System/Parser.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/Parser.h" />
+		<Unit filename="../src/System/Platform.h" />
+		<Unit filename="../src/System/Thread.h" />
+		<Unit filename="../src/System/Timer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/Timer.h" />
+		<Unit filename="../src/System/Win32/IOHelper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/Win32/Mutex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/Win32/Platform.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/System/Win32/Thread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

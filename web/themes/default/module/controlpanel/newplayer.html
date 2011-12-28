@@ -1,0 +1,107 @@
+<form action="" method="post">
+	<table border="0" cellpadding="2" cellspacing="1">
+		<!-- BEGIN ERROR_FORM -->
+			<tr>
+				<td colspan="2" align="center">{ERROR_FORM.Display}</td>
+			</tr>
+		<!-- END ERROR_FORM -->
+		<tr>
+			<td valign="top">
+				<table border="0" cellpadding="2" cellspacing="1">
+					<tr>
+						<td>{FORM_NAMEPJ}</td>
+						<td><input type="text" name="NewPJ[name]" placeholder="{FORM_NAMEPJ}" style="width:150px"></td>
+					</tr>
+					<tr>
+						<td>{FORM_ORIGEN}</td>
+						<td>
+							<select name="NewPJ[home]" style="width:150px">
+								<!-- BEGIN CITIES_SHOW -->
+									<option value="{CITIES_SHOW.ID}">{CITIES_SHOW.CITY}</option>
+								<!-- END CITIES_SHOW -->
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>{FORM_RAZA}</td>
+						<td>
+							<select id="races" name="NewPJ[race]" style="width:150px">
+								<!-- BEGIN RACES_SHOW -->
+									<option value="{RACES_SHOW.ID}">{RACES_SHOW.RACE}</option>
+								<!-- END RACES_SHOW -->
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>{FORM_CLASE}</td>
+						<td>
+							<select name="NewPJ[class]" style="width:150px">
+								<!-- BEGIN CLASSES_SHOW -->
+									<option value="{CLASSES_SHOW.ID}">{CLASSES_SHOW.CLASS}</option>
+								<!-- END CLASSES_SHOW -->
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>{FORM_GENERO}</td>
+						<td>
+							<select name="NewPJ[gender]" style="width:150px">
+								<!-- BEGIN GENDER_SHOW -->
+									<option value="{GENDER_SHOW.ID}">{GENDER_SHOW.GENDER}</option>
+								<!-- END GENDER_SHOW -->
+							</select>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<script type="text/javascript" src="{NEWPLAYERJS}"></script>
+			<td valign="top">
+				<div align="center">{FORM_ATRIBUTOS}</div>
+				<table border="0" cellpadding="2" cellspacing="1">
+					<tr>
+						<td>&nbsp;</td>
+						<td align="center">D</td>
+						<td align="center">M</td>
+						<td align="center">F</td>
+					</tr>
+					<tr>
+						<td>{FORM_FUERZA}</td>
+						<td id="dado" data-final="f">{FORM_DFUERZA}</td>
+						<td id="f_suma">+{ADD_STRENGTH}</td>
+						<td id="f_final">18</td>
+					</tr>
+					<tr>
+						<td>{FORM_AGILIDAD}</td>
+						<td id="dado" data-final="a">{FORM_DAGILIDAD}</td>
+						<td id="a_suma">+{ADD_AGILITY}</td>
+						<td id="a_final">18</td>
+					</tr>
+					<tr>
+						<td>{FORM_INTELIGENCIA}</td>
+						<td id="dado" data-final="i">{FORM_DINTELIGENCIA}</td>
+						<td id="i_suma">+{ADD_INTELIGENCE}</td>
+						<td id="i_final">18</td>
+					</tr>
+					<tr>
+						<td>{FORM_CARISMA}</td>
+						<td id="dado" data-final="ca">{FORM_DCARISMA}</td>	
+						<td id="ca_suma">+{ADD_CHARISMA}</td>
+						<td id="ca_final">18</td>
+					</tr>
+					<tr>
+						<td>{FORM_CONSTITUCION}</td>
+						<td id="dado" data-final="co">{FORM_DCONSTITUCION}</td>
+						<td id="co_suma">+{ADD_CONSTITUTION}</td>
+						<td id="co_final">18</td>
+					</tr>
+					<tr>
+						<td colspan="4" align="center"><input type="button" id="TirarDados" value="Tirar Dados">
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><input type="submit" name="submit" value="{FORM_SUBMIT}"></td>
+		</tr>
+	</table>
+</form>
